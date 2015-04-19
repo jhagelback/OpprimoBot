@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Dll.cpp" />
+    <ClCompile Include="Source\OpprimoBot.cpp" />
+    <ClCompile Include="Source\AIloop.cpp" />
+    <ClCompile Include="Source\Managers\BuildingPlacer.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\AgentManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\Constructor.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\ExplorationManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\ResourceManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\SpottedObject.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\Upgrader.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MainAgents\AgentFactory.cpp">
+      <Filter>MainAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MainAgents\BaseAgent.cpp">
+      <Filter>MainAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MainAgents\TargetingAgent.cpp">
+      <Filter>MainAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MainAgents\WorkerAgent.cpp">
+      <Filter>MainAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Pathfinding\NavigationAgent.cpp">
+      <Filter>Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Pathfinding\PFFunctions.cpp">
+      <Filter>Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Pathfinding\PathObj.cpp">
+      <Filter>Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Pathfinding\Pathfinder.cpp">
+      <Filter>Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\cthread.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Config.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\FileReaderUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\ProfilerObj.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Profiler.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Statistics.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Commander.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\BuildplanEntry.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Squad.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\UnitSetup.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\ExplorationSquad.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\RushSquad.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Zerg\LurkerRush.cpp">
+      <Filter>Commander\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Influencemap\MapManager.cpp">
+      <Filter>Influencemap</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\StrategySelector.cpp">
+      <Filter>Commander</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\RefineryAgent.cpp">
+      <Filter>StructureAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\StructureAgent.cpp">
+      <Filter>StructureAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\Protoss\NexusAgent.cpp">
+      <Filter>StructureAgents\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\Terran\CommandCenterAgent.cpp">
+      <Filter>StructureAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\Terran\ComsatAgent.cpp">
+      <Filter>StructureAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StructureAgents\Zerg\HatcheryAgent.cpp">
+      <Filter>StructureAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\TransportAgent.cpp">
+      <Filter>UnitAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\UnitAgent.cpp">
+      <Filter>UnitAgents</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Protoss\CarrierAgent.cpp">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Protoss\CorsairAgent.cpp">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Protoss\HighTemplarAgent.cpp">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Protoss\ReaverAgent.cpp">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\BattlecruiserAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\FirebatAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\GhostAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\MarineAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\MedicAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\ScienceVesselAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\SiegeTankAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\WraithAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Terran\VultureAgent.cpp">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Zerg\DefilerAgent.cpp">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Zerg\HydraliskAgent.cpp">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Zerg\LurkerAgent.cpp">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Zerg\MutaliskAgent.cpp">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitAgents\Zerg\QueenAgent.cpp">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Terran\TerranMain.cpp">
+      <Filter>Commander\Terran</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Protoss\ProtossMain.cpp">
+      <Filter>Commander\Protoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commander\Zerg\ZergMain.cpp">
+      <Filter>Commander\Zerg</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\OpprimoBot.h" />
+    <ClInclude Include="Source\AIloop.h" />
+    <ClInclude Include="Source\Managers\BuildingPlacer.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\AgentManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\Constructor.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\ExplorationManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\ResourceManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\SpottedObject.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\Upgrader.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MainAgents\AgentFactory.h">
+      <Filter>MainAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MainAgents\BaseAgent.h">
+      <Filter>MainAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MainAgents\TargetingAgent.h">
+      <Filter>MainAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MainAgents\WorkerAgent.h">
+      <Filter>MainAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Pathfinding\NavigationAgent.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Pathfinding\PFFunctions.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Pathfinding\PathObj.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Pathfinding\Pathfinder.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\cthread.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Config.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\FileReaderUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\ProfilerObj.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Profiler.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Statistics.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Commander.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Managers\BuildplanEntry.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Squad.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\UnitSetup.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\ExplorationSquad.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\RushSquad.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Zerg\LurkerRush.h">
+      <Filter>Commander\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Influencemap\MapManager.h">
+      <Filter>Influencemap</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\StrategySelector.h">
+      <Filter>Commander</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\RefineryAgent.h">
+      <Filter>StructureAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\StructureAgent.h">
+      <Filter>StructureAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\Protoss\NexusAgent.h">
+      <Filter>StructureAgents\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\Terran\CommandCenterAgent.h">
+      <Filter>StructureAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\Terran\ComsatAgent.h">
+      <Filter>StructureAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StructureAgents\Zerg\HatcheryAgent.h">
+      <Filter>StructureAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\TransportAgent.h">
+      <Filter>UnitAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\UnitAgent.h">
+      <Filter>UnitAgents</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Protoss\CarrierAgent.h">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Protoss\CorsairAgent.h">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Protoss\HighTemplarAgent.h">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Protoss\ReaverAgent.h">
+      <Filter>UnitAgents\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\BattlecruiserAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\FirebatAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\GhostAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\MarineAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\MedicAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\ScienceVesselAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\SiegeTankAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\WraithAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Terran\VultureAgent.h">
+      <Filter>UnitAgents\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Zerg\DefilerAgent.h">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Zerg\HydraliskAgent.h">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Zerg\LurkerAgent.h">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Zerg\MutaliskAgent.h">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitAgents\Zerg\QueenAgent.h">
+      <Filter>UnitAgents\Zerg</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Sets.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Terran\TerranMain.h">
+      <Filter>Commander\Terran</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Protoss\ProtossMain.h">
+      <Filter>Commander\Protoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commander\Zerg\ZergMain.h">
+      <Filter>Commander\Zerg</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Commander">
+      <UniqueIdentifier>{2646c881-6ebc-4f46-b294-58931859f891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commander\Terran">
+      <UniqueIdentifier>{e3f6b7d2-2986-42a3-baca-166e08a0eecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commander\Protoss">
+      <UniqueIdentifier>{4011ad0e-3f1a-448a-9141-764e6accc35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commander\Zerg">
+      <UniqueIdentifier>{611c055a-4c33-45e3-956d-9df47cf60c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Influencemap">
+      <UniqueIdentifier>{61a9ac58-ddd8-4c6a-b4b9-aca82e05efb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainAgents">
+      <UniqueIdentifier>{bf03cac7-7419-43cc-ad26-c37847cbc74b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{d19bcb59-809e-482e-bff2-1f6c3fafbe69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pathfinding">
+      <UniqueIdentifier>{e6f0de1b-bb2d-4e4e-a28c-2f9b0d756777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StructureAgents">
+      <UniqueIdentifier>{71203547-ba7a-4c28-b74c-e0f1b1fce18b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StructureAgents\Terran">
+      <UniqueIdentifier>{ed7fb677-9fca-419c-9d28-95c49711246c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StructureAgents\Protoss">
+      <UniqueIdentifier>{20ab1cb2-d289-42c9-ba6c-29a370db9d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StructureAgents\Zerg">
+      <UniqueIdentifier>{e9a0cee7-3399-4c0d-a364-377f252855c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitAgents">
+      <UniqueIdentifier>{7f6f0abc-d2c8-4913-b975-26fee71866fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitAgents\Terran">
+      <UniqueIdentifier>{00909e29-eb6c-468e-adb2-e4b25dee937c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitAgents\Protoss">
+      <UniqueIdentifier>{0b7d5c56-e65c-4d89-b8d4-3621fecdfa85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitAgents\Zerg">
+      <UniqueIdentifier>{6a736f10-b935-482b-b060-c0a90e84a28d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{a6645a41-0aed-48c9-9906-b739d29c2c08}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2E63AE74-758A-4607-9DE4-D28E814A6E13}</ProjectGuid>
+    <RootNamespace>ExampleAIModule</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>OpprimoBot</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;WIN32;_DEBUG;_WINDOWS;_USRDLL;EXAMPLEAIMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PreLinkEvent />
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>../lib/BWAPId.lib;../lib/BWTA.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../BWAPI-data/AI/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;WIN32;NDEBUG;_WINDOWS;_USRDLL;EXAMPLEAIMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PreLinkEvent />
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>../lib/BWAPI.lib;../lib/BWTA.lib;../lib/libCGAL-vc120-mt-4.4.lib;../lib/libboost_thread-vc120-mt-1_56.lib;../lib/libboost_system-vc120-mt-1_56.lib;../lib/libboost_filesystem-vc120-mt-1_56.lib;../lib/libgmp-10.lib;../lib/libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../bwapi-data/AI/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\AIloop.cpp" />
+    <ClCompile Include="Source\Commander\Commander.cpp" />
+    <ClCompile Include="Source\Commander\ExplorationSquad.cpp" />
+    <ClCompile Include="Source\Commander\Protoss\ProtossMain.cpp" />
+    <ClCompile Include="Source\Commander\RushSquad.cpp" />
+    <ClCompile Include="Source\Commander\Squad.cpp" />
+    <ClCompile Include="Source\Commander\StrategySelector.cpp" />
+    <ClCompile Include="Source\Commander\Terran\TerranMain.cpp" />
+    <ClCompile Include="Source\Commander\UnitSetup.cpp" />
+    <ClCompile Include="Source\Commander\Zerg\LurkerRush.cpp" />
+    <ClCompile Include="Source\Commander\Zerg\ZergMain.cpp" />
+    <ClCompile Include="Source\Dll.cpp" />
+    <ClCompile Include="Source\Influencemap\MapManager.cpp" />
+    <ClCompile Include="Source\MainAgents\AgentFactory.cpp" />
+    <ClCompile Include="Source\MainAgents\BaseAgent.cpp" />
+    <ClCompile Include="Source\MainAgents\TargetingAgent.cpp" />
+    <ClCompile Include="Source\MainAgents\WorkerAgent.cpp" />
+    <ClCompile Include="Source\Managers\AgentManager.cpp" />
+    <ClCompile Include="Source\Managers\BuildingPlacer.cpp" />
+    <ClCompile Include="Source\Managers\BuildplanEntry.cpp" />
+    <ClCompile Include="Source\Managers\Constructor.cpp" />
+    <ClCompile Include="Source\Managers\ExplorationManager.cpp" />
+    <ClCompile Include="Source\Managers\ResourceManager.cpp" />
+    <ClCompile Include="Source\Managers\SpottedObject.cpp" />
+    <ClCompile Include="Source\Managers\Upgrader.cpp" />
+    <ClCompile Include="Source\OpprimoBot.cpp" />
+    <ClCompile Include="Source\Pathfinding\NavigationAgent.cpp" />
+    <ClCompile Include="Source\Pathfinding\Pathfinder.cpp" />
+    <ClCompile Include="Source\Pathfinding\PathObj.cpp" />
+    <ClCompile Include="Source\Pathfinding\PFFunctions.cpp" />
+    <ClCompile Include="Source\StructureAgents\Protoss\NexusAgent.cpp" />
+    <ClCompile Include="Source\StructureAgents\RefineryAgent.cpp" />
+    <ClCompile Include="Source\StructureAgents\StructureAgent.cpp" />
+    <ClCompile Include="Source\StructureAgents\Terran\CommandCenterAgent.cpp" />
+    <ClCompile Include="Source\StructureAgents\Terran\ComsatAgent.cpp" />
+    <ClCompile Include="Source\StructureAgents\Zerg\HatcheryAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Protoss\CarrierAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Protoss\CorsairAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Protoss\HighTemplarAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Protoss\ReaverAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\BattlecruiserAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\FirebatAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\GhostAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\MarineAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\MedicAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\ScienceVesselAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\SiegeTankAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\VultureAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Terran\WraithAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\TransportAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\UnitAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Zerg\DefilerAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Zerg\HydraliskAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Zerg\LurkerAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Zerg\MutaliskAgent.cpp" />
+    <ClCompile Include="Source\UnitAgents\Zerg\QueenAgent.cpp" />
+    <ClCompile Include="Source\Utils\Config.cpp" />
+    <ClCompile Include="Source\Utils\cthread.cpp" />
+    <ClCompile Include="Source\Utils\FileReaderUtils.cpp" />
+    <ClCompile Include="Source\Utils\Profiler.cpp" />
+    <ClCompile Include="Source\Utils\ProfilerObj.cpp" />
+    <ClCompile Include="Source\Utils\Statistics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\AIloop.h" />
+    <ClInclude Include="Source\Commander\Commander.h" />
+    <ClInclude Include="Source\Commander\ExplorationSquad.h" />
+    <ClInclude Include="Source\Commander\Protoss\ProtossMain.h" />
+    <ClInclude Include="Source\Commander\RushSquad.h" />
+    <ClInclude Include="Source\Commander\Squad.h" />
+    <ClInclude Include="Source\Commander\StrategySelector.h" />
+    <ClInclude Include="Source\Commander\Terran\TerranMain.h" />
+    <ClInclude Include="Source\Commander\UnitSetup.h" />
+    <ClInclude Include="Source\Commander\Zerg\LurkerRush.h" />
+    <ClInclude Include="Source\Commander\Zerg\ZergMain.h" />
+    <ClInclude Include="Source\Influencemap\MapManager.h" />
+    <ClInclude Include="Source\MainAgents\AgentFactory.h" />
+    <ClInclude Include="Source\MainAgents\BaseAgent.h" />
+    <ClInclude Include="Source\MainAgents\TargetingAgent.h" />
+    <ClInclude Include="Source\MainAgents\WorkerAgent.h" />
+    <ClInclude Include="Source\Managers\AgentManager.h" />
+    <ClInclude Include="Source\Managers\BuildingPlacer.h" />
+    <ClInclude Include="Source\Managers\BuildplanEntry.h" />
+    <ClInclude Include="Source\Managers\Constructor.h" />
+    <ClInclude Include="Source\Managers\ExplorationManager.h" />
+    <ClInclude Include="Source\Managers\ResourceManager.h" />
+    <ClInclude Include="Source\Managers\SpottedObject.h" />
+    <ClInclude Include="Source\Managers\Upgrader.h" />
+    <ClInclude Include="Source\OpprimoBot.h" />
+    <ClInclude Include="Source\Pathfinding\NavigationAgent.h" />
+    <ClInclude Include="Source\Pathfinding\Pathfinder.h" />
+    <ClInclude Include="Source\Pathfinding\PathObj.h" />
+    <ClInclude Include="Source\Pathfinding\PFFunctions.h" />
+    <ClInclude Include="Source\StructureAgents\Protoss\NexusAgent.h" />
+    <ClInclude Include="Source\StructureAgents\RefineryAgent.h" />
+    <ClInclude Include="Source\StructureAgents\StructureAgent.h" />
+    <ClInclude Include="Source\StructureAgents\Terran\CommandCenterAgent.h" />
+    <ClInclude Include="Source\StructureAgents\Terran\ComsatAgent.h" />
+    <ClInclude Include="Source\StructureAgents\Zerg\HatcheryAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Protoss\CarrierAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Protoss\CorsairAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Protoss\HighTemplarAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Protoss\ReaverAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\BattlecruiserAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\FirebatAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\GhostAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\MarineAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\MedicAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\ScienceVesselAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\SiegeTankAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\VultureAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Terran\WraithAgent.h" />
+    <ClInclude Include="Source\UnitAgents\TransportAgent.h" />
+    <ClInclude Include="Source\UnitAgents\UnitAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Zerg\DefilerAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Zerg\HydraliskAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Zerg\LurkerAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Zerg\MutaliskAgent.h" />
+    <ClInclude Include="Source\UnitAgents\Zerg\QueenAgent.h" />
+    <ClInclude Include="Source\Utils\Config.h" />
+    <ClInclude Include="Source\Utils\cthread.h" />
+    <ClInclude Include="Source\Utils\FileReaderUtils.h" />
+    <ClInclude Include="Source\Utils\Profiler.h" />
+    <ClInclude Include="Source\Utils\ProfilerObj.h" />
+    <ClInclude Include="Source\Utils\Sets.h" />
+    <ClInclude Include="Source\Utils\Statistics.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
