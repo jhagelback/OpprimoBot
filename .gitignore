@@ -41,14 +41,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.obj
-*.log
-SCProjects/OpprimoBot/Release/OpprimoBot.tlog/cl.command.1.tlog
-SCProjects/OpprimoBot/Release/OpprimoBot.exp
-SCProjects/OpprimoBot/Release/OpprimoBot.lib
-SCProjects/OpprimoBot/Release/OpprimoBot.tlog/CL.read.1.tlog
-*.tlog
-SCProjects/OpprimoBot/Release/vc120.pdb
-SCProjects/Release/OpprimoBot.pdb
-SCProjects/SCProjects.sdf
-SCProjects/SCProjects.opensdf
